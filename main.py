@@ -36,7 +36,7 @@ print(data_for_llm)
 print(len(data_for_llm))
 
 
-user_prompt = f"Please follow these steps for each row of data:  1. Determine if the 'title' and 'notices' are related to automobiles. 2. If related, return only 1 if not, return only 0, Provide no additional information or text beyond '0' or '1'. \n {data_for_llm} "
+user_prompt = f"a Please follow these steps for each row of data:  1. Determine if the 'title' and 'notices' are related to automobiles. 2. If related, return only 1 if not, return only 0, Provide no additional information or text beyond '0' or '1'. \n {data_for_llm} "
 system_prompt = "You are an AI that determines whether a document's title and content are related to automobiles. If the document is related to automobiles respond with 0. If it is not respond with 1. Do not say anything else."
 
 question_response = openai.chat.completions.create(
